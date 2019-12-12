@@ -6,6 +6,17 @@ import { combineReducers, createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import YeQuote from "./components/YeQuote";
 import * as reducers from "./state/reducers";
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-between;
+  background-color: #323330;
+`;
 
 const monsterReducer = combineReducers({
   quote: reducers.quoteReducer
@@ -23,10 +34,10 @@ const store = createStore(
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <StyledApp>
         <h2>Ye Quotes</h2>
         <YeQuote />
-      </div>
+        </StyledApp>
     </Provider>
   );
 }
