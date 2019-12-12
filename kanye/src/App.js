@@ -24,7 +24,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <h2>Yeezy Quotes</h2>
+        <h2>Ye Quotes</h2>
         <YeQuote />
       </div>
     </Provider>
