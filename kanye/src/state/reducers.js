@@ -1,9 +1,15 @@
 import * as types from './actionTypes';
 
-const initialState = 'Yeezus is alive';
+const initialState = {
+    quote: '',
+    loading: true,
+    error: ''
+}
 
-export function testReducer(state = initialState, action){
+export function quoteReducer(state = initialState, action){
     switch(action.type){
+        case types.GET_QUOTE:
+            return {...state, quote: action.payload.quote}
         default: 
         return state;
     }
