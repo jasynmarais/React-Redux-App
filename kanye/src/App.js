@@ -35,7 +35,6 @@ function App() {
   return (
     <Provider store={store}>
       <StyledApp>
-        <h2>Ye Quotes</h2>
         <YeQuote />
         </StyledApp>
     </Provider>
